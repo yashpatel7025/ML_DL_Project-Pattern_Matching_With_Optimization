@@ -27,7 +27,7 @@
 <img src="./images/4.jpg" width="1000" height="430">
 
 - We **did not trained** virat kohli’s image, and similarity score obtained by our model **exceeds our threshold value** set, therefore it gives result as **unknown person**
-<img src="./images/2.jpg" width="1000" height="430">
+<img src="./images/2.JPG" width="1000" height="430">
 
 - here the inference image has different **facial orientation** and **Obscured face**, even few people will fail to recognize this image of his struggling days but still our model **accurately recognized the face**
 <img src="./images/1.JPG" width="1000" height="430">
