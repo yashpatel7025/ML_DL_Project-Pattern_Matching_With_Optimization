@@ -10,6 +10,11 @@
 - Name and ID of recognised user is displayed.
 
 
+- RHS image is the image which is saved by the user for later recognition and whose embeddings are stored in .pickle file
+
+- Trained Image of Salman was without Beard, image we given to system to be recognized is having beard, still our system recognises person accurately
 <img src="./images/4.jpg" width="1000" height="430">
+
+- 
 <img src="./images/5.jpg" width="1000" height="430">
-<img src="./images/1.jpg" width="1000" height="430">
+<img src="./images/1.JPG" width="1000" height="430">
