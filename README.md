@@ -24,7 +24,7 @@
 
 - RHS image is the image which is saved by the user for later recognition and whose embeddings are stored in .pickle file
 - Trained Image of Salman was **without Beard**, image we given to system to be recognized is **having beard**, still our system recognises person accurately
-<img src="./images/1.jpg" width="1000" height="430">
+<img src="./images/1.JPG" width="1000" height="430">
 
 - We **did not trained** virat kohli’s image, and similarity score obtained by our model **exceeds our threshold value** set, therefore it gives result as **unknown person**
 <img src="./images/2.JPG" width="1000" height="430">
