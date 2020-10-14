@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Recognized</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+
+}
+
+.column2 {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+
+}
+
+
+
+.my-padding{
+    padding: 40px 70px 0px 40px;
+}
+
+.mybox{
+  width:550px; 
+  
+  margin-left:50px;
+}
+
+.myboxright{
+  width:300px; 
+  
+}
+
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+
+  }
+
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+
+}
+
+.mycolumn{
+
+border-left: 6px solid green;
+  height: 500px;
+  
+}
+
+.myfont {
+
+
+			font-family: Times;
+			color: #63776B;
+			font-size: 21px;
+			text-transform: lowercase;
+		}
+
+		.content-section {
+			background: #ffffff;
+			padding: 30px 50px;
+			border: 1px solid #dddddd;
+			border-radius: 3px;
+			margin-bottom: 20px;
+
+		}
+</style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  <ul class="navbar-nav ml-auto">
+
+  	<li class="nav-item">
+      <a href="{% url 'images_upload' %}" class="nav-link">Upload Selected Images</a>
+    </li>
+  	
+    <li class="nav-item ">
+     <a href="{% url 'person_id_image' %}" class="nav-link">Uplaod Person's Id_Image</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'align_images_from_unalign_datab' %}" class="nav-link">Align Images</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'create_face_embeddings' %}" class="nav-link">Create-Face-Embedding</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'recog_face' %}" class="nav-link">Live Recognition</a>
+  </li>
+  <li class="nav-item active">
+      <a href="{% url 'recognize_image' %}" class="nav-link">Recognize_image</a>
+  </li>
+  <li class="nav-item">
+     <a href="{% url 'redirect_admin' %}" class="nav-link">View Database (Admin)</a>
+  </li>
+
+ </ul>
+</div>
+</nav>
+
+
+
+<div class="row my-padding">
+  <div class="column ">
+              <div class="card mybox" >
+
+              	<span class="badge badge-pill badge-dark">
+              	<font size="3">Uploaded Image</font></span><br>
+				                              
+				    <img class="card-img-top" src={{uploaded_image_url}} alt="Card image" >
+				    
+                </div>
+  </div>
+
+  
+ 
+<div class="column2" ><br><br><br><br><br><br>
+
+	<img class="card-img-top" src="/media/arrow.png" style="width:100%">
+</div>
+
+  <div class="column2" >
+  	 
+                                <div class="card myboxright">
+
+                                	<span class="badge badge-pill badge-dark">
+              	<font size="3">Matched Person</font></span><br>
+                  
+
+
+					  <img class="card-img-top" src={{predicted_person_url}} alt="Card image" height="300" width="100">
+									    <div class="card-body">
+									      <h4 class="card-title myfont">
+
+									 <span class="badge badge-pill badge-dark"><font size="4"> &nbsp;&nbsp;&nbsp;{{predicted_person}} &nbsp;&nbsp;&nbsp;</font></span></h4>
+									      <p class="card-text myfont">Name :-- {{predicted_person}}<br>
+			Person's Database ID :-- {{predicted_person_id}}</p>
+									      <p class="card-text myfont"></p>
+
+									      <a href="#" class="btn btn-primary">See Profile</a>
+					                    </div>
+					                </div>
+					          
+    </div>
+  
+  
+ 
+  
+</div><!--row ends-->
+ 
+
+  
+  
+
+</body>
+</html>

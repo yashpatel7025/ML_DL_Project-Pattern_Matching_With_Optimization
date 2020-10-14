@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  <ul class="navbar-nav ml-auto">
+
+  	<li class="nav-item active">
+      <a href="{% url 'images_upload' %}" class="nav-link">Upload Selected Images</a>
+    </li>
+  	
+    <li class="nav-item ">
+     <a href="{% url 'person_id_image' %}" class="nav-link">Uplaod Person's Id_Image</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'align_images_from_unalign_datab' %}" class="nav-link">Align Images</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'create_face_embeddings' %}" class="nav-link">Create-Face-Embedding</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'recog_face' %}" class="nav-link">Live Recognition</a>
+  </li>
+  <li class="nav-item ">
+      <a href="{% url 'recognize_image' %}" class="nav-link">Recognize_image</a>
+  </li>
+  <li class="nav-item">
+     <a href="{% url 'redirect_admin' %}" class="nav-link">View Database (Admin)</a>
+  </li>
+
+ </ul>
+</div>
+</nav>
+
+	<h3>images successfully uploaded</h3>
+
+	{% if messages %}
+     {% for message in messages %}
+         <div class="text-center alert alert-{{ message.tags }}">
+             {{ message|safe }}
+         </div>
+     {% endfor %}
+ {% endif %}
+
+	
+	
+
+</body>
+</html>

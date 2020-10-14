@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    .content-section {
+      background: #ffffff;
+      padding: 30px 50px;
+      border: 1px solid #dddddd;
+      border-radius: 3px;
+      margin-bottom: 20px;
+
+    }
+
+    .myfont {
+
+
+      font-family: 'Domine', serif;
+      color: #63776B;
+      font-size: 18px;
+      text-transform: lowercase;
+    }
+  </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  <ul class="navbar-nav ml-auto">
+
+  	<li class="nav-item ">
+      <a href="{% url 'images_upload' %}" class="nav-link">Upload Selected Images</a>
+    </li>
+  	
+    <li class="nav-item ">
+     <a href="{% url 'person_id_image' %}" class="nav-link">Uplaod Person's Id_Image</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'align_images_from_unalign_datab' %}" class="nav-link">Align Images</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'create_face_embeddings' %}" class="nav-link">Create-Face-Embedding</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'recog_face' %}" class="nav-link">Live Recognition</a>
+  </li>
+  <li class="nav-item ">
+      <a href="{% url 'recognize_image' %}" class="nav-link">Recognize_image</a>
+  </li>
+  <li class="nav-item">
+     <a href="{% url 'redirect_admin' %}" class="nav-link">View Database (Admin)</a>
+  </li>
+
+ </ul>
+</div>
+</nav>
+
+
+<h2> Can not detect face in uploaded Image...Please check your Image and uplaod correct one
+
+</body>
+</html>
